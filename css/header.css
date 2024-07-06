@@ -1,0 +1,106 @@
+header {
+    background-color: var(--black);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--gray);
+}
+
+header .left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+
+header .burger-icon {
+    display: none;
+}
+
+
+header .logo img {
+    cursor: pointer;
+}
+
+header a {
+    color: var(--white);
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+header a:hover {
+    color: var(--orange);
+    transition: 1s;
+
+}
+
+header .links .selected {
+    color: var(--orange);
+}
+
+header .cart img {
+    width: 23px;
+    cursor: pointer;
+}
+
+/* start empty cart  */
+
+.empty-cart {
+    position: absolute;
+    right: 150px;
+    top: 120px;
+    width: 380px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: var(--white);
+    z-index: 1000;
+    display: none;
+}
+
+.empty-cart .img {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.empty-cart img {
+    width: 100px;
+}
+
+.empty-cart p {
+    color: var(--gray);
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.show {
+    display: block;
+}
+
+
+
+/* start header queries  */
+@media (max-width: 991px) {
+
+    header .burger-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    header .links {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    header .left {
+        width: 70%;
+    }
+}

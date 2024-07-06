@@ -1,0 +1,80 @@
+.container .products {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: var(--main-margin);
+}
+
+.container .products .card {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    text-align: center;
+    width: calc(90% / 3);
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.container .card h3 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.container .products img {
+    width: 130px;
+    margin-top: -70px;
+}
+
+
+.container .card a {
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container .products .card:hover a {
+    color: var(--orange);
+}
+
+.container .products .card span {
+    color: var(--orange);
+    cursor: pointer;
+    font-size: 26px;
+}
+
+/* satrt queries  */
+@media (max-width: 1024px) {
+    .container .products {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 992px) {
+    .container .card h3 {
+        font-size: 14px;
+    }
+
+    .container .card a {
+        font-size: 13px;
+    }
+
+    .container .products .card span {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .products {
+        flex-direction: column;
+    }
+
+    .container .products .card {
+        margin-bottom: 80px;
+        width: 90%;
+    }
+
+    .container .products img {
+        width: 130px;
+        margin-top: -50px;
+    }
+}

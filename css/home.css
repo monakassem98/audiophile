@@ -1,0 +1,399 @@
+/* start hero section  */
+.hero-section {
+    background-color: var(--black);
+    height: calc(100vh - 70px);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.hero .left {
+    animation-name: fadein;
+    animation-delay: 3s;
+}
+
+.hero-section .left h3 {
+    color: var(--gray);
+    letter-spacing: 7px;
+    font-size: 13px;
+}
+
+.hero-section .left h1 {
+    font-size: 50px;
+    margin: 0;
+    color: var(--white);
+}
+
+.hero-section .left p {
+    color: var(--gray);
+    line-height: 2;
+    width: 500px;
+
+}
+
+.hero-section .left .btn {
+    background-color: var(--orange);
+    margin-top: 20px;
+    color: var(--white);
+}
+
+.hero-section .left .btn:hover {
+    background-color: var(--light-orange);
+}
+
+.hero-section .right img {
+    width: 450px;
+    margin-top: -30px;
+    margin-right: 100px;
+    animation: fadein 5s;
+    animation-delay: 1s;
+}
+
+
+/* start animation  */
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* start hero section responsive  */
+@media (max-width: 1024px) {
+    .hero-section .right {
+        width: 400px;
+    }
+
+    .hero-section .right img {
+        width: 350px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 0;
+    }
+
+    .hero-section .left {
+        position: absolute;
+        text-align: center;
+        z-index: 1000;
+        transform: translate(-50%, 50%);
+        left: 50%;
+
+    }
+
+    .hero-section .btn {
+        display: inline-block;
+    }
+
+    .hero-section .right img {
+        margin-right: 0;
+        opacity: 0.3;
+        width: 500px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+    }
+
+}
+
+@media (max-width: 714px) {
+
+    .hero-section .left h1 {
+        font-size: 40px;
+    }
+
+    .hero-section .left p {
+        font-size: 14px;
+    }
+}
+
+/* start zx-9-speaker  */
+.zx-9-speaker-section {
+    background-color: var(--orange);
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: var(--border-radius);
+    margin-top: var(--main-margin);
+    padding-top: var(--main-margin);
+    overflow: hidden;
+    position: relative;
+}
+
+.zx-9-speaker-section::before {
+    content: "";
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    border: 1px solid white;
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+}
+
+.zx-9-speaker-section::after {
+    content: "";
+    width: 540px;
+    height: 540px;
+    border-radius: 50%;
+    border: 1px solid white;
+    opacity: 0.3;
+    position: absolute;
+    left: 30px;
+    bottom: -100px;
+}
+
+.zx-9-speaker-section img {
+    position: relative;
+    width: 410px;
+    height: 497px;
+    margin-bottom: -20px;
+    z-index: 1000;
+}
+
+.zx-9-speaker-section .right {
+    position: relative;
+    z-index: 1000;
+}
+
+.zx-9-speaker-section .right h1 {
+    font-size: 60px;
+    color: white;
+    letter-spacing: 3px;
+    line-height: 1;
+}
+
+.zx-9-speaker-section .right p {
+    color: var(--white);
+    line-height: var(--line-height);
+    font-weight: 100;
+}
+
+.zx-9-speaker-section .right .btn {
+    background-color: var(--black);
+    color: white;
+    margin-top: 50px;
+}
+
+.zx-9-speaker-section .right .btn:hover {
+    background-color: #4C4C4C;
+}
+
+/* start media queries for zx-9-speaker  */
+@media (max-width: 992px) {
+    .zx-9-speaker-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-top: 70px;
+    }
+
+    .zx-9-speaker-section::before {
+        content: "";
+        width: 300px;
+        height: 300px;
+        transform: translate(-50%, -8%);
+        left: 50%;
+    }
+
+    .zx-9-speaker-section::after {
+        content: "";
+        width: 400px;
+        height: 400px;
+        transform: translate(-50%, -113%);
+        left: 50%;
+    }
+
+    .zx-9-speaker-section img {
+        width: 197px;
+        height: 237px;
+    }
+
+    .zx-9-speaker-section .right {
+        margin-top: 100px;
+    }
+
+    .zx-9-speaker-section .right .btn {
+        margin: auto;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 781px) {
+    .zx-9-speaker-section img {
+        width: 147px;
+        height: 187px;
+    }
+
+    .zx-9-speaker-section::after {
+        transform: translate(-50%, -105%);
+    }
+
+    .zx-9-speaker-section::before {
+        transform: translate(-50%, -15%);
+    }
+
+}
+
+/* start zx-7-speaker-section  */
+.zx-7-speaker-section {
+    margin-top: var(--secondary-margin);
+    position: relative;
+
+}
+
+.zx-7-speaker-section .left {
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    left: 100px;
+}
+
+.zx-7-speaker-section h3 {
+    font-size: 30px;
+}
+
+.zx-7-speaker-section .right img {
+    border-radius: var(--border-radius);
+    width: 100%;
+}
+
+.zx-7-speaker-section .btn {
+    border: 2px var(--black) solid;
+    margin-top: 30px;
+}
+
+.zx-7-speaker-section .btn:hover {
+    background-color: var(--black);
+    color: white;
+}
+
+/* start .zx-7-speaker-section queries  */
+@media (max-width: 800px) {
+    .zx-7-speaker-section .right img {
+        height: 200px;
+    }
+}
+
+@media (max-width:781px) {
+    .zx-7-speaker-section .left {
+        top: 10%;
+        left: 50px;
+    }
+}
+
+/* start yx-1-earphones  */
+.yx-1-earphones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--secondary-margin);
+}
+
+.yx-1-earphones img {
+    border-radius: var(--border-radius);
+}
+
+.yx-1-earphones .right {
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: left;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 45%;
+    border-radius: var(--border-radius);
+}
+
+.yx-1-earphones h3 {
+    font-size: 30px;
+    margin-left: 60px;
+}
+
+.yx-1-earphones .btn {
+    margin-left: 60px;
+    border: 2px var(--black) solid;
+}
+
+.yx-1-earphones .btn:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* start .yx-1-earphones media queries  */
+@media (max-width: 1016px) {
+    .yx-1-earphones img {
+        width: 470px;
+    }
+}
+
+@media (max-width: 871px) {
+    .yx-1-earphones img {
+        width: 350px;
+    }
+
+    .yx-1-earphones h3 {
+        font-size: 25px;
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 700px) {
+    .yx-1-earphones {
+        flex-direction: column;
+    }
+
+    .yx-1-earphones img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .yx-1-earphones .right {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+
+    .yx-1-earphones .btn {
+        margin-top: -100px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .yx-1-earphones {
+        flex-direction: column;
+    }
+
+    .yx-1-earphones img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .yx-1-earphones .right {
+        width: 100%;
+        height: 300px;
+    }
+
+
+
+
+}
